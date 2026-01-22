@@ -1,0 +1,61 @@
+# Default Configuration for RSEdit Benchmark
+# This file contains the default inference parameters used by generate.py
+# 
+# To customize settings:
+# 1. Copy this file: cp config_example.yaml my_config.yaml
+# 2. Modify your copy as needed
+# 3. Run: python generate.py --model_name <model> --config my_config.yaml
+#
+# Or edit this file directly to change the global defaults.
+
+# Random seed for reproducibility
+seed: 42
+
+# Number of inference/denoising steps
+# IMPORTANT: Some models have model-specific defaults that take precedence over this value:
+#   - flux-kontext: 28 steps (optimized default)
+#   - flux-kontext-nvfp4: 28 steps (optimized for NVFP4 single-file version)
+#   - qwen-image-edit-lightning: 8 steps (as per Lightning model specification)
+# For all other models, this value (100) will be used unless overridden.
+num_inference_steps: 100
+
+# Text guidance scale - controls how closely the output follows the text prompt
+# Higher values = stronger adherence to prompt, lower values = more creative freedom
+# Each model has optimized defaults. Model-specific defaults will be used if this is commented:
+#   - FLUX Kontext / FLUX Kontext NVFP4: 3.5
+#   - InstructPix2Pix: 7.5
+#   - MagicBrush: 7.5
+#   - Qwen-Image-Edit: 3.5
+#   - Qwen-Image-Edit-Lightning: 1.0 (uses true_cfg_scale instead, see below)
+#   - DiffusionSat: 7.5
+#   - Text2Earth: 4.0
+#   - SD2.1 / SD1.5: 7.5
+# Uncomment to override all models with a single value:
+# guidance_scale: 7.5
+
+# True CFG scale - used by some models (e.g., FLUX, Qwen-Image-Edit-Lightning) instead of standard guidance_scale
+# Models that use true_cfg_scale:
+#   - FLUX Kontext / FLUX Kontext NVFP4: Uses true_cfg_scale alongside guidance_scale
+#   - Qwen-Image-Edit-Lightning: Uses true_cfg_scale=1.0 by default (as per Lightning specification)
+# If not specified, defaults to 1.0 for models that support it.
+# Uncomment to override:
+# true_cfg_scale: 1.0
+
+# Image guidance scale - for InstructPix2Pix and MagicBrush only
+# Controls how much the output should preserve the input image structure
+# Uncomment to override model default (1.5):
+image_guidance_scale: 1.5
+
+# Strength for SDEdit models (DiffusionSat, Text2Earth, SD2.1)
+# Range: 0.0-1.0, where higher values = more change from original image
+# Uncomment to override model default (0.75):
+strength: 0.75
+
+# Output image resolution in pixels (square images)
+# Uncomment to override default (512):
+resolution: 512
+
+# Negative prompt (optional) - guide what NOT to generate
+# Uncomment and modify to use:
+# negative_prompt: "blurry, low quality, distorted"
+

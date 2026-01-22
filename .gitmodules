@@ -1,0 +1,3 @@
+[submodule "libs/prodigy"]
+	path = libs/prodigy
+	url = https://github.com/konstmish/prodigy
