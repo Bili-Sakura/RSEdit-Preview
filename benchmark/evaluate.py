@@ -10,6 +10,14 @@ import lpips
 from torch.nn import functional as F
 
 # Import VIEScore evaluator
+import sys
+import os
+# Add current directory to sys.path to ensure viescore_openrouter can be imported
+# when running from different directories
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
 try:
     from viescore_openrouter import VIEScoreEvaluator
     VIESCORE_AVAILABLE = True

@@ -916,8 +916,10 @@ def load_rsedit_dit_pipeline(model_path: str, device: str, dtype: torch.dtype, d
     non-standard sequence lengths from token concatenation.
     """
     import sys
+    import os
     # Add path to RSEdit pipeline module
-    rsedit_light_path = "/path/to/src",
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    rsedit_light_path = os.path.join(repo_root, "src", "rsedit-light")
     if rsedit_light_path not in sys.path:
         sys.path.insert(0, rsedit_light_path)
     

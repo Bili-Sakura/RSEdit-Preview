@@ -11,8 +11,15 @@ import time
 import random
 import concurrent.futures
 import threading
+import sys
 from PIL import Image
 from tqdm import tqdm
+
+# Add parent directory to sys.path to import viescore_openrouter
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if parent_dir not in sys.path:
+    sys.path.insert(0, parent_dir)
+
 from viescore_openrouter import VIEScoreEvaluator
 
 
