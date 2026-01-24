@@ -1,4 +1,4 @@
-# RSEdit: Remote Sensing Image Editing with Token Concatenation
+# RSEdit: Text-Guided Image Editing for Remote Sensing
 
 RSEdit is a framework for instruction-based remote sensing image editing given text-to-image diffusion models. It propose a universal framework for both U-Net based (e.g. Stable Diffusion) and DiT based (e.g. Pixart-α, Stable Diffusion 3).
 
