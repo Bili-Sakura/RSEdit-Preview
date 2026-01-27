@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RSEdit: Instruction-Following Remote Sensing Image Editing</title>
+  <title>RSEdit: Text-Guided Image Editing for Remote Sensing</title>
 
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -94,7 +94,20 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">RSEdit: Instruction-Following Remote Sensing Image Editing</h1>
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Project Page</span>
+              <span class="author-block">
+                <a href="#">Zhenyuan Chen</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="#">Zechuan Zhang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="#">Feng Zhang</a><sup>1</sup>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup>Zhejiang University
+              </span>
             </div>
 
             <div class="column has-text-centered">
@@ -136,6 +149,24 @@
             <p>
               General-domain text-guided image editors achieve strong photorealism but introduce artifacts, hallucinate objects, and break the orthographic constraints of remote sensing (RS) imagery. We trace this gap to two high-level causes: (i) limited RS world knowledge in pre-trained models, and (ii) conditioning schemes that misalign with the bi-temporal structure and spatial priors of Earth observation data. We present RSEdit, a unified framework that adapts pretrained text-to-image diffusion models—both U-Net and DiT—into instruction-following RS editors via channel concatenation and in-context token concatenation. Trained on over 60,000 semantically rich bi-temporal remote sensing image pairs, RSEdit learns precise, physically coherent edits while preserving geospatial content. Experiments show clear gains over general and commercial baselines, demonstrating strong generalizability across diverse scenarios including disaster impacts, urban growth, and seasonal shifts, positioning RSEdit as a robust data engine for downstream analysis. We will release code, pretrained models, evaluation protocols, training logs, and generated results for full reproducibility.
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 section-title">Citation</h2>
+          <div class="content">
+            <pre style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 4px; overflow-x: auto; font-size: 0.9rem; line-height: 1.6;"><code>@misc{rsedit2026,
+  author       = {Zhenyuan Chen, Zechuan Zhang, Feng Zhang},
+  title        = {RSEdit: Text-Guided Image Editing for Remote Sensing},
+  howpublished = {\url{https://github.com/Bili-Sakura/RSEdit-preview}},
+  year         = {2026}
+}</code></pre>
           </div>
         </div>
       </div>

@@ -1,6 +1,9 @@
 # RSEdit: Text-Guided Image Editing for Remote Sensing
 
 [![Project Page](https://img.shields.io/badge/Project%20Page-RSEdit-lightblue?logo=github)](https://d-sakura.github.io/RSEdit-preview/)
+[![RSEdit-DiT Model Checkpoint](https://img.shields.io/badge/RSEdit--DiT-Model%20Checkpoint-orange?logo=huggingface)](https://huggingface.co/BiliSakura/RSEdit-DiT)
+[![RSEdit-UNet Model Checkpoint](https://img.shields.io/badge/RSEdit--UNet-Model%20Checkpoint-orange?logo=huggingface)](https://huggingface.co/BiliSakura/RSEdit-UNet-text-ablation)
+[![HuggingFace Datasets](https://img.shields.io/badge/HuggingFace-Datasets-yellow?logo=huggingface)](https://huggingface.co/datasets/BiliSakura/RSCC-RSEdit-Test-Split)
 
 
 RSEdit is a framework for instruction-based remote sensing image editing given text-to-image diffusion models. It propose a universal framework for both U-Net based (e.g. Stable Diffusion) and DiT based (e.g. Pixart-α, Stable Diffusion 3).
