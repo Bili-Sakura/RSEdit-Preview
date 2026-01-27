@@ -3,518 +3,368 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <title>RSEdit: Instruction-Following Remote Sensing Image Editing</title>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
   </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .publication-title {
+      font-weight: 800;
+    }
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .content {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .hero-body {
+      padding: 3rem 1.5rem;
+    }
+    .figure-caption {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #4a4a4a;
+    }
+    .main-results-img {
+        margin-top: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    th, td {
+      padding: 0.5rem;
+      text-align: center;
+      border-bottom: 1px solid #dbdbdb;
+    }
+    th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+    }
+    .best {
+      font-weight: 700;
+    }
+    .second-best {
+      text-decoration: underline;
+    }
+    .method-col {
+      text-align: left;
+    }
+    .table-container {
+      margin-bottom: 2rem;
+    }
+    .table-caption {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
 
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <main id="main-content">
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">RSEdit: Instruction-Following Remote Sensing Image Editing</h1>
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+              <span class="author-block">Project Page</span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://github.com/d-sakura/RSEdit-preview" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser.png" alt="RSEdit Teaser" style="width: 100%;">
+        <h2 class="subtitle has-text-centered figure-caption">
+          RSEdit enables high-quality, instruction-following editing of remote sensing imagery. Given a source satellite image and a natural language instruction, our framework generates result images that are both physically plausible and faithful to the instructions. This figure showcases the diverse editing capabilities of our model across various scenarios.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+  </section>
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3 section-title">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              General-domain text-guided image editors achieve strong photorealism but introduce artifacts, hallucinate objects, and break the orthographic constraints of remote sensing (RS) imagery. We trace this gap to two high-level causes: (i) limited RS world knowledge in pre-trained models, and (ii) conditioning schemes that misalign with the bi-temporal structure and spatial priors of Earth observation data. We present RSEdit, a unified framework that adapts pretrained text-to-image diffusion models—both U-Net and DiT—into instruction-following RS editors via channel concatenation and in-context token concatenation. Trained on over 60,000 semantically rich bi-temporal remote sensing image pairs, RSEdit learns precise, physically coherent edits while preserving geospatial content. Experiments show clear gains over general and commercial baselines, demonstrating strong generalizability across diverse scenarios including disaster impacts, urban growth, and seasonal shifts, positioning RSEdit as a robust data engine for downstream analysis. We will release code, pretrained models, evaluation protocols, training logs, and generated results for full reproducibility.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Framework Overview</h2>
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <img src="static/images/overview.png" alt="RSEdit Overview" style="width: 100%;">
+          <p class="figure-caption has-text-centered">
+            Overview of the RSEdit framework. We propose a universal adaptation strategy that aligns the conditioning mechanism with the architecture’s inductive bias. For U-Net backbones (left), we use channel concatenation to leverage convolutional priors. For DiT backbones (right), we use token concatenation to exploit the in-context learning capabilities of transformers.
+          </p>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+  <section class="section is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Change-Centric Evaluation</h2>
+      <div class="columns is-centered">
+        <div class="column is-full">
+            <div class="columns is-centered">
+                <div class="column is-three-quarters">
+                    <img src="static/images/change_metric.png" alt="Change Metric" style="width: 100%;">
+                </div>
+            </div>
+          <p class="figure-caption has-text-centered">
+            Proposed change-centric evaluation metric using building damage assessment. We leverage a pre-trained ChangeStar model to produce semantic masks for the edited image and compare them to ground-truth damage masks to quantify editing accuracy.
           </p>
-
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Main Results</h2>
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <img src="static/images/main_results.png" alt="Main Results" style="width: 100%;" class="main-results-img">
+          
+          <div class="table-container" style="margin-top: 2rem;">
+            <p class="table-caption">Table 1: Change detection evaluation results. $F1_{\text{dam}}$ denotes the harmonic mean of per-class F1 scores following xView2 protocol. Bold indicates best results, <u>underline</u> indicates second best.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th rowspan="2" class="method-col">Method</th>
+                  <th rowspan="2">$F1_{\text{dam}} \uparrow$</th>
+                  <th colspan="3">VIE Scores $\uparrow$</th>
+                </tr>
+                <tr>
+                  <th>SC</th>
+                  <th>PQ</th>
+                  <th>$\text{VIE}_{\text{overall}}$</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="method-col">SD 1.5$^\dagger$</td>
+                  <td>6.87</td>
+                  <td>3.332</td>
+                  <td>2.457</td>
+                  <td>2.492</td>
+                </tr>
+                <tr>
+                  <td class="method-col">SD 2.1$^\dagger$</td>
+                  <td>6.05</td>
+                  <td>2.958</td>
+                  <td>2.042</td>
+                  <td>2.120</td>
+                </tr>
+                <tr>
+                  <td class="method-col">Text2Earth$^\dagger$</td>
+                  <td>5.06</td>
+                  <td>3.970</td>
+                  <td>3.494</td>
+                  <td>3.229</td>
+                </tr>
+                <tr>
+                  <td class="method-col">InstructPix2Pix</td>
+                  <td>8.37</td>
+                  <td>4.462</td>
+                  <td>3.195</td>
+                  <td>3.153</td>
+                </tr>
+                <tr>
+                  <td class="method-col">MagicBrush</td>
+                  <td>0.96</td>
+                  <td>2.205</td>
+                  <td>2.006</td>
+                  <td>1.638</td>
+                </tr>
+                <tr>
+                  <td class="method-col">UltraEdit</td>
+                  <td>1.16</td>
+                  <td>4.250</td>
+                  <td>2.098</td>
+                  <td>2.531</td>
+                </tr>
+                <tr>
+                  <td class="method-col">Flux.1-Kontext</td>
+                  <td>5.41</td>
+                  <td>5.065</td>
+                  <td class="best">4.047</td>
+                  <td>3.693</td>
+                </tr>
+                <tr>
+                  <td class="method-col" style="color: #3273dc;">RSEdit<sub>U-Net</sub></td>
+                  <td class="best">34.11</td>
+                  <td class="best">5.793</td>
+                  <td>3.657</td>
+                  <td class="second-best">4.129</td>
+                </tr>
+                <tr>
+                  <td class="method-col" style="color: #3273dc;">RSEdit<sub>DiT</sub></td>
+                  <td class="second-best">25.94</td>
+                  <td class="second-best">5.759</td>
+                  <td class="second-best">4.024</td>
+                  <td class="best">4.210</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- End of Statcounter Code -->
+  <section class="section is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Out-of-Domain Generalization</h2>
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <img src="static/images/ood_result.png" alt="OOD Results" style="width: 100%;">
+          <p class="figure-caption has-text-centered">
+            Out-of-domain generalization on LEVIR-CC and SECOND-CC test sets. Our model trained on RSCC generalizes well to unseen benchmarks without fine-tuning.
+          </p>
 
-  </body>
-  </html>
+          <div class="table-container" style="margin-top: 2rem;">
+            <p class="table-caption">Table 3: Out-of-domain generalization on LEVIR-CC [Liu et al. 2022] and SECOND-CC [Karaca et al. 2025] test sets. Our model trained on RSCC generalizes well to unseen benchmarks without fine-tuning.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th class="method-col">Method</th>
+                  <th>SC $\uparrow$</th>
+                  <th>PQ $\uparrow$</th>
+                  <th>VIE $\uparrow$</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: #fafafa; font-style: italic;">
+                  <td colspan="4" class="method-col">LEVIR-CC</td>
+                </tr>
+                <tr>
+                  <td class="method-col">InstructPix2Pix</td>
+                  <td class="best">4.98</td>
+                  <td>2.33</td>
+                  <td>2.71</td>
+                </tr>
+                <tr>
+                  <td class="method-col">UltraEdit</td>
+                  <td>2.45</td>
+                  <td>1.28</td>
+                  <td>1.18</td>
+                </tr>
+                <tr>
+                  <td class="method-col" style="color: #3273dc;">RSEdit<sub>U-Net</sub></td>
+                  <td class="second-best">3.88</td>
+                  <td class="second-best">3.97</td>
+                  <td class="second-best">2.74</td>
+                </tr>
+                <tr>
+                  <td class="method-col" style="color: #3273dc;">RSEdit<sub>DiT</sub></td>
+                  <td>3.85</td>
+                  <td class="best">4.41</td>
+                  <td class="best">2.82</td>
+                </tr>
+                <tr style="background-color: #fafafa; font-style: italic;">
+                  <td colspan="4" class="method-col">SECOND-CC</td>
+                </tr>
+                <tr>
+                  <td class="method-col">InstructPix2Pix</td>
+                  <td>3.94</td>
+                  <td>1.87</td>
+                  <td>1.96</td>
+                </tr>
+                <tr>
+                  <td class="method-col">UltraEdit</td>
+                  <td>3.69</td>
+                  <td>1.17</td>
+                  <td>1.57</td>
+                </tr>
+                <tr>
+                  <td class="method-col" style="color: #3273dc;">RSEdit<sub>U-Net</sub></td>
+                  <td class="second-best">4.28</td>
+                  <td class="second-best">2.67</td>
+                  <td class="second-best">2.61</td>
+                </tr>
+                <tr>
+                  <td class="method-col" style="color: #3273dc;">RSEdit<sub>DiT</sub></td>
+                  <td class="best">4.60</td>
+                  <td class="best">3.00</td>
+                  <td class="best">2.91</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
