@@ -83,6 +83,24 @@
       margin-bottom: 0.5rem;
       text-align: left;
     }
+    .figure-embed-container {
+      margin-bottom: 2.5rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .figure-embed-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .figure-embed-title {
+      font-weight: 600;
+      padding: 0.75rem 1rem;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #e0e0e0;
+    }
   </style>
 </head>
 <body>
@@ -113,7 +131,7 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://github.com/d-sakura/RSEdit-preview" target="_blank"
+                  <a href="https://github.com/Bili-Sakura/RSEdit-Preview" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -164,7 +182,7 @@
             <pre style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 4px; overflow-x: auto; font-size: 0.9rem; line-height: 1.6;"><code>@misc{rsedit2026,
   author       = {Zhenyuan Chen, Zechuan Zhang, Feng Zhang},
   title        = {RSEdit: Text-Guided Image Editing for Remote Sensing},
-  howpublished = {\url{https://github.com/Bili-Sakura/RSEdit-preview}},
+  howpublished = {\url{https://github.com/Bili-Sakura/RSEdit-Preview}},
   year         = {2026}
 }</code></pre>
           </div>
@@ -379,6 +397,81 @@
             </table>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Disaster Case Study Figures</h2>
+      <p class="figure-caption has-text-centered" style="margin-bottom: 2rem;">
+        High-resolution results for disaster scenario editing. Each figure displays RSEdit's editing capabilities across different disaster scenarios.
+      </p>
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="figure-embed-container">
+            <div class="figure-embed-title">Guatemala Volcano</div>
+            <img src="static/images/figures-big-big-Guatemala-Volcano.png" alt="Guatemala Volcano" style="width: 100%; display: block;">
+          </div>
+          <div class="figure-embed-container">
+            <div class="figure-embed-title">Hurricane Florence</div>
+            <img src="static/images/figures-big-big-Hurricane-Florence.png" alt="Hurricane Florence" style="width: 100%; display: block;">
+          </div>
+          <div class="figure-embed-container">
+            <div class="figure-embed-title">Joplin Tornado</div>
+            <img src="static/images/figures-big-big-Joplin-Tornado.png" alt="Joplin Tornado" style="width: 100%; display: block;">
+          </div>
+          <div class="figure-embed-container">
+            <div class="figure-embed-title">Mexico Earthquake</div>
+            <img src="static/images/figures-big-big-Mexico-Earthquake.png" alt="Mexico Earthquake" style="width: 100%; display: block;">
+          </div>
+          <div class="figure-embed-container">
+            <div class="figure-embed-title">Palu Tsunami</div>
+            <img src="static/images/figures-big-big-Palu-Tsunami.png" alt="Palu Tsunami" style="width: 100%; display: block;">
+          </div>
+          <div class="figure-embed-container">
+            <div class="figure-embed-title">Portugal Wildfire</div>
+            <img src="static/images/figures-big-big-Portugal-Wildfire.png" alt="Portugal Wildfire" style="width: 100%; display: block;">
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container" style="margin-top: 2rem;">
+        <p class="table-caption">Table 3: Full text instructions for the samples used in qualitative analysis.</p>
+        <table>
+          <thead>
+            <tr>
+              <th class="method-col">Scenario</th>
+              <th>Instruction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="method-col"><strong>Guatemala Volcano</strong></td>
+              <td class="has-text-justified">The volcanic eruption transformed the lush golf course into a desolate ash-covered landscape, with once-pristine fairways blanketed in gray debris and expanded water bodies inundating low-lying areas. Five buildings exhibit minor damage, showing partial burns, cracked roofs, and scattered volcanic material, while six structures suffer major collapse, their walls and roofs shattered by encroaching lava flows or mudslides. Two properties are entirely obliterated, reduced to scorched foundations or submerged under torrents of water and sediment, marking a catastrophic shift from pre-event tranquility to post-disaster devastation.</td>
+            </tr>
+            <tr>
+              <td class="method-col"><strong>Joplin Tornado</strong></td>
+              <td class="has-text-justified">The previously intact residential area has been transformed into a scene of widespread devastation, with 43 buildings entirely obliterated—their foundations scorched, collapsed, or submerged in mud—while 8 structures suffered partial roof or wall collapses and debris encroachment, and 3 exhibited cracked facades or localized burn marks, leaving no properties untouched amidst the catastrophic wreckage.</td>
+            </tr>
+            <tr>
+              <td class="method-col"><strong>Portugal Wildfire</strong></td>
+              <td class="has-text-justified">Wildfire impacts revealed minor damage to three buildings, showing partial burn marks, scattered debris, and disrupted roofing, while one structure remained undisturbed. Surrounding vegetation exhibited widespread charring, with ash-covered patches and reduced greenery density. Roads displayed residual smoke haze and localized erosion from firefighting water runoff, altering terrain contours near affected sites.</td>
+            </tr>
+            <tr>
+              <td class="method-col"><strong>Hurricane Florence</strong></td>
+              <td class="has-text-justified">Severe flooding engulfed the area, submerging all six buildings up to their rooftops, causing partial wall collapses and significant structural weakening. Vegetation along the shoreline was stripped away by rushing waters, exposing bare earth and debris. Roads near the settlement became impassable due to mudslides and erosion, isolating the community. No intact structures remained visible, with every building classified as majorly damaged (Level 2) under disaster protocols.</td>
+            </tr>
+            <tr>
+              <td class="method-col"><strong>Mexico Earthquake</strong></td>
+              <td class="has-text-justified">Post-earthquake assessment shows no structural damage detected in 89 evaluated buildings, with all structures maintaining intact roofs, walls, and foundations. Nearby infrastructure, including roads and vegetation, displays no evidence of collapse, flooding, or volcanic activity. The area visually aligns with pre-disaster conditions, resulting in Disaster Level 0 (No Damage) classification for all inspected properties.</td>
+            </tr>
+            <tr>
+              <td class="method-col"><strong>Palu Tsunami</strong></td>
+              <td class="has-text-justified">A devastating tsunami has caused catastrophic destruction across the coastal settlement, transforming the landscape from a densely populated area into a scene of widespread ruin. Pre-event imagery revealed 82 intact structures nestled along the shoreline, while post-event analysis reveals 66 buildings obliterated (Disaster Level 3)—scorched, submerged, or entirely erased—leaving only skeletal remains or vacant lots. Seven properties suffered major damage (Level 2), with collapsed roofs, encroaching mudflows, or partial wall failures, concentrated near the waterfront. Nine buildings escaped unscathed (Level 0), situated on elevated terrain or shielded from surge impacts. Coastal erosion reshaped the shoreline, displacing boats and scattering debris, as turbid waters inundated low-lying zones, marking the tsunami's merciless advance.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
