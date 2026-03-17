@@ -167,11 +167,14 @@ python benchmark/evaluate.py --results_dir /path/to/results --device cuda --use_
 If you find this work useful, please cite:
 
 ```bibtex
-@misc{rsedit2026,
-  author       = {Zhenyuan Chen, Zechuan Zhang, Feng Zhang},
-  title        = {RSEdit: Text-Guided Image Editing for Remote Sensing},
-  howpublished = {\url{https://github.com/Bili-Sakura/RSEdit-preview}},
-  year         = {2026}
+@misc{zhenyuan2026rsedittextguidedimageediting,
+      title={RSEdit: Text-Guided Image Editing for Remote Sensing}, 
+      author={Chen Zhenyuan and Zhang Zechuan and Zhang Feng},
+      year={2026},
+      eprint={2603.13708},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.13708}, 
 }
 ```
 
