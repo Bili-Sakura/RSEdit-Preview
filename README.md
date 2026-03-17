@@ -1,6 +1,6 @@
 # RSEdit: Text-Guided Image Editing for Remote Sensing
 
-[![Project Page](https://img.shields.io/badge/Project%20Page-RSEdit-lightblue?logo=github)](https://Bili-Sakura.github.io/RSEdit-preview/)
+[![Project Page](https://img.shields.io/badge/Project%20Page-RSEdit-lightblue?logo=github)](https://bili-sakura.github.io/RSEdit-Preview/)
 [![RSEdit-DiT Model Checkpoint](https://img.shields.io/badge/RSEdit--DiT-Model%20Checkpoint-orange?logo=huggingface)](https://huggingface.co/BiliSakura/RSEdit-DiT)
 [![RSEdit-UNet Model Checkpoint](https://img.shields.io/badge/RSEdit--UNet-Model%20Checkpoint-orange?logo=huggingface)](https://huggingface.co/BiliSakura/RSEdit-UNet-text-ablation)
 [![HuggingFace Datasets](https://img.shields.io/badge/HuggingFace-Datasets-yellow?logo=huggingface)](https://huggingface.co/datasets/BiliSakura/RSCC-RSEdit-Test-Split)
